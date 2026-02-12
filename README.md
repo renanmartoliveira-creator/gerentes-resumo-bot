@@ -110,3 +110,69 @@ MIT License
 ## Suporte
 
 Para reportar bugs ou sugerir features, abra uma issue no repositório.
+
+
+## Como Executar o Bot
+
+### Opção 1: Execução Local (Recomendado para Teste)
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/renanmartoliveira-creator/gerentes-resumo-bot.git
+cd gerentes-resumo-bot
+
+# 2. Configure as variáveis de ambiente
+cp .env.example .env
+# Edite o arquivo .env e adicione seu BOT_TOKEN
+
+# 3. Execute o script
+chmod +x run.sh
+./run.sh
+```
+
+### Opção 2: Execução Manual
+
+```bash
+# Instalar dependências
+pip install -r requirements.txt
+
+# Executar o bot
+python3 bot.py
+```
+
+### Opção 3: Deploy no Render (Servidor em Nuvem)
+
+1. Faça um fork deste repositório
+2. Acesse [Render.com](https://render.com)
+3. Crie um novo "Background Worker"
+4. Selecione o repositório
+5. Configure as variáveis de ambiente no painel do Render
+6. Deploy automático será realizado
+
+## Testando o Bot
+
+Depois que o bot estiver rodando, abra o Telegram e:
+
+1. Procure por **@gerentes_resumo_bot** (ou o nome do seu bot)
+2. Clique em /start para iniciar
+3. Use /resumo_dia para gerar um resumo
+
+Exemplo de resposta:
+```
+📊 RESUMO DO DIA - 12/02/2026
+==================================================
+Data: Wednesday, 12 de February de 2026
+
+**ATIVIDADES DO DIA:**
+✅ Bot iniciado e aguardando comandos
+✅ Sistema de resumo diário ativado
+✅ Monitoramento de tópicos configurado
+
+**ESTATÍSTICAS:**
+📌 Tópicos monitorados: 17
+💬 Sistema de coleta ativo
+🤖 Bot respondendo aos comandos
+
+Gerado em: 12/02/2026 às 17:54:32
+==================================================
+```
